@@ -42,7 +42,7 @@ function get01PackAnswer(packageItems, packageSize) {
                     // 在去掉这个元素重量之前的最优价值对应重量加上这个元素本身的重量
                     itemTotalValue = bagMaxtrix[i - 1][w - packageItems[i].weight] + packageItems[i].value;
                     // 每个数位所要比较的值 是 在目前重量条件下没加这个元素之前的值 
-                    // 因为背包受重这个条件改变 导致没加这个元素的最优重量也不一样了
+                    // 因为背包受重这个条件改变 可能导致没加这个元素的最优重量也发生变化
                     bagMaxtrix[i][w] = itemTotalValue > bagMaxtrix[i - 1][w] ? itemTotalValue : bagMaxtrix[i - 1][w];
                 }
 
