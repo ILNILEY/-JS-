@@ -5,3 +5,28 @@
 * 输入：包括两个正整数n,k(1 <= n <= 10^5, 0 <= k <= n - 1)。
 * 输出：对于每个测试用例, 输出一个正整数表示可能的数对数量。
 */
+
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+rl.on('line', (value) => {
+    value = value.split(' ');
+    let n = parseInt(value[0]);
+    let k = parseInt(value[1]);
+    let count = 0;
+    if(k===0 ){
+        count = n*n;
+    }else{
+        for (let i = k + 1; i <= n; i++) {
+            count += parseInt(n / i) * (i - k);
+            if (n % i >= k) {
+                count += n % i - k + 1;
+            }
+        }
+    }
+    console.log(count);
+}).on('close', () => {
+    process.exit(0);
+})

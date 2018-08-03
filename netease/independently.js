@@ -32,7 +32,7 @@ rl.on('line', (value) => {
                     console.log(i);
                     break;
                 }
-            } //16 4 8 2
+            }
         }else {
             console.log(f);
         }

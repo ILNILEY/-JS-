@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceFolder}/sword\\repeatNum.js",
+            "program": "${workspaceFolder}/netease\\numpairs.js",
             "console":"integratedTerminal"
         }
     ]
