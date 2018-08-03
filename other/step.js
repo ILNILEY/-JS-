@@ -8,6 +8,8 @@
  * n个台阶时 f(n)=f(n-1)+f(n-2)
  */
 
+ // 可用表格记忆 优化算法
+
  let height = 10;
 
  function getTotalWay(height){
